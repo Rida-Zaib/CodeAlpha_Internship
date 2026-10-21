@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.DS_Store
+# YOLO weights are downloaded automatically (or baked in by the Dockerfile)
+*.pt
+backend/models/
+# temporary uploads / results
+rcv_jobs/
+uploads/
+node_modules/
+.pytest_cache/
+
+backend/models/
+backend/weights/
+weights/
+*.pt

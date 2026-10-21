@@ -1,0 +1,16 @@
+# Web server
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+# Vision
+ultralytics>=8.3.0
+opencv-python-headless>=4.9
+numpy>=1.26
+scipy>=1.11
+lapx>=0.5.5
+imageio-ffmpeg>=0.5
+# 'Analyze people' (CLIP zero-shot attributes)
+transformers>=4.40
+# (torch / torchvision are installed by ultralytics; the Dockerfile installs the small CPU build first)
+ftfy>=6.1
+regex>=2023.0
