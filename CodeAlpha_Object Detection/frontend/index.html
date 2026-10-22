@@ -4687,6 +4687,27 @@
     @media (max-width: 899px) { .mm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 560px) { .mm-grid { grid-template-columns: 1fr; } .scope-toggle { grid-template-columns: 1fr; } }
     #server-status .warm { color: var(--gold-light); }
+
+    /* ═══ MOBILE-ONLY FIXES (phones/tablets up to 899px; desktop is untouched) ═══
+       1. The settings panel was cut off at 1400px, so the lower category menus and any opened dropdown
+          disappeared behind the next section. It may now grow to fit its content.
+       2. The "Analyze people / Tiny-object scan" checkboxes were stretched to full width by the generic
+          mobile input rule, squeezing their text to 0px and making the panel ~8500px tall.
+       3. The disabled RTSP tab: "COMING SOON" badge now sits neatly on its own line.            */
+    @media (max-width: 899px) {
+      #demo .demo-settings-grid.is-open { max-height: 40000px !important; }
+      #demo .demo-settings-grid .smart-toggle input[type="checkbox"] {
+        width: 18px !important; min-width: 18px !important; height: 18px !important; min-height: 18px !important;
+        flex: none !important; padding: 0 !important; margin: 2px 0 0 !important;
+      }
+      #demo .demo-settings-grid .smart-toggle > span { min-width: 0 !important; flex: 1 1 auto !important; }
+      #demo .demo-settings-grid .sel-add input, #demo .demo-settings-grid .mm-search { width: 100% !important; box-sizing: border-box !important; }
+      #demo .source-tab[disabled] > span { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 5px !important; text-align: center !important; line-height: 1.25 !important; }
+      #demo .source-tab[disabled] em {
+        display: inline-block !important; margin: 0 !important; padding: 2px 8px !important;
+        font-size: 0.6rem !important; letter-spacing: 0.08em !important; white-space: nowrap !important; line-height: 1.2 !important;
+      }
+    }
   </style>
 
 </head>

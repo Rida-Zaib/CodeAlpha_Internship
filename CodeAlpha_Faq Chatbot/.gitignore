@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+venv/
+data/
+.venv/
+backend/weights/
+backend/models/
+*.pt
